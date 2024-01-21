@@ -13,7 +13,7 @@ resource "aws_vpc" "ecomm-vpc" {
 resource "aws_subnet" "ecomm-public-subnet" {
   vpc_id                  = aws_vpc.ecomm-vpc.id
   cidr_block              = "10.0.1.0/24"
-  availability_zone       = "us-east-1a"
+  availability_zone       = "us-east-2a"
   map_public_ip_on_launch = "true"
   tags = {
     Name = "ecomm public subnet1"
@@ -24,7 +24,7 @@ resource "aws_subnet" "ecomm-public-subnet" {
 resource "aws_subnet" "ecomm-private-subnet" {
   vpc_id                  = aws_vpc.ecomm-vpc.id
   cidr_block              = "10.0.2.0/24"
-  availability_zone       = "us-east-1a"
+  availability_zone       = "us-east-2a"
   map_public_ip_on_launch = "true"
   tags = {
     Name = "ecomm private subnet1"
